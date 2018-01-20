@@ -78,8 +78,8 @@ $screen-xl-max: 1200px;
         @include sm-h {max-width: 6rem;}
       }
   a {color: #fff; font-weight: 100; font-family: 'helvetica';}
-  a:hover {text-decoration: none; color: #ecae96cc;}
-  a:focus {color:#ecae96cc;}
+  a:hover {text-decoration: none; color: #4ac9decc;}
+  a:focus {color:#4ac9decc;}
   ul {list-style-type: none; display: table; margin: 0 auto;
       li {padding: .9rem; display: table-cell; vertical-align: middle; text-transform: uppercase;} 
       @include sm-h {padding-top: 0.2rem;}
@@ -309,7 +309,7 @@ $screen-xl-max: 1200px;
  * Site footer
  */
 .site-footer {
-  padding: 0px; text-align: center; background-color: #161618;
+  padding: 0px; text-align: center; background-color: transparent; margin-top: -60px;
 }
 
 .footer-heading {
@@ -484,10 +484,18 @@ $screen-xl-max: 1200px;
        font-weight: 200; text-shadow: 2px 2px 2px black; letter-spacing: .3rem;}
   }
 
+.col-half {width: 50%; padding: 5rem;
+  h3 {font-family: 'Oswald'; text-transform: uppercase; color:white; letter-spacing: .3rem;}
+  p {color: white; letter-spacing: 1px; font-family: 'Oswald'; 
+     transform: scale(1, .9); padding: 1rem;}
+  iframe {display: block; margin: 0 auto;}
+}
+
 .front-content{
   background: url(background1.jpg);
   display: flex;
   justify-content: center;
+
   align-items: center;
     h1, h4, a{color:white; display: block; text-align: center; letter-spacing: .3rem; font-family: 'Oswald';
               font-weight: 100;
@@ -495,7 +503,8 @@ $screen-xl-max: 1200px;
       
       }
     h4 {margin-bottom: 0px; margin-top: 3.1rem;}
-
+    p {color: white; max-width: 560px; letter-spacing: 1.5px; font-family: 'Oswald'; 
+     transform: scale(1, .9); text-align: justify; text-justify: inter-word; margin: 0 auto;}
     img {display: block; margin: auto; padding: 1rem; cursor: pointer;}
 
     .logo {max-width: 8rem;}
@@ -556,7 +565,21 @@ $screen-xl-max: 1200px;
         }
 
 .smaller-iframe {width: 38%; display:inline-table;
-  @include sm {width: 100%;}  
+  @include sm {width: 100%;} 
+
+.responsive-iframe {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+}
+.responsive-iframe iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+} 
 
   
 }
@@ -580,5 +603,12 @@ $screen-xl-max: 1200px;
 #mc_embed_signup .clear {display: ruby !important;}
 #mc_embed_signup input.button {max-width: 300px !important; min-width: 140px !important; margin: 0 auto !important;}
 
+/* Locations Page CSS */
 
+
+.locations-page {
+  p {text-align: center; margin-top: -15px;}
+  p, h1 {margin-left: 4rem;}
+
+}
 
