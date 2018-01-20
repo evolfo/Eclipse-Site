@@ -607,7 +607,7 @@ $screen-xl-max: 1200px;
 
 
 .locations-page {
-  p {text-align: center; margin-top: -15px;}
+  p, h3 {text-align: center; letter-spacing: 1px; margin-top: 5px; max-width: 100%;}
   p, h1 {}
   img {margin-left: -30px;}
 
